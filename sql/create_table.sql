@@ -107,3 +107,34 @@ TABLESPACE pg_default;
 
 ALTER TABLE public.stock_list
     OWNER to postgres;
+
+-- Table: public.nse_indices_option_daily
+
+-- DROP TABLE public.nse_indices_option_daily;
+
+CREATE TABLE public.nse_indices_option_daily
+(
+    stock_id integer NOT NULL,
+    trade_date date,
+    stock_code character varying(50) COLLATE pg_catalog."default",
+    strike_price real NOT NULL,
+    option_type character varying(10) COLLATE pg_catalog."default" NOT NULL,
+    expiry_date date NOT NULL,
+    identifier character varying(50) COLLATE pg_catalog."default",
+    open_interest numeric,
+    change_in_oi numeric,
+    percent_change_in_oi real,
+    total_traded_volume numeric,
+    implied_volatility real,
+    last_price real,
+    change real,
+    total_buy_quantity numeric,
+    total_sell_quantity numeric,
+    underlying_value real,
+    CONSTRAINT nse_indices_option_daily_pkey PRIMARY KEY (stock_id, expiry_date, strike_price, option_type)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE public.nse_indices_option_daily
+    OWNER to postgres;
