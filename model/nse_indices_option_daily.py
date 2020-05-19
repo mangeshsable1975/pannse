@@ -6,7 +6,7 @@ from config.postgres_connection import base
 class NseIndicesOptionDaily(base):
 	__tablename__ = 'nse_indices_option_daily'
 	stock_id = Column(Integer,primary_key=True)
-	trade_date = Column(Date)
+	trade_date = Column(Date,primary_key=True)
 	stock_code = Column(String)
 	strike_price = Column(Float,primary_key=True)
 	option_type = Column(String,primary_key=True)

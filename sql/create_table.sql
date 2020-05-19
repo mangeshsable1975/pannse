@@ -98,9 +98,12 @@ CREATE TABLE public.stock_list
     nifty50 boolean,
     nifty100 boolean,
     nifty500 boolean,
-    downloaded boolean DEFAULT false,
     fno boolean DEFAULT false,
-    indices boolean DEFAULT false
+    indices boolean DEFAULT false,
+    cash_updated date,
+    fno_updated date,
+    stock_opt_updated date,
+    indices_opt_updated date
 )
 
 TABLESPACE pg_default;

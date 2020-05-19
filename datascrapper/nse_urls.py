@@ -41,3 +41,7 @@ def get_equities_opt_chain_url(stock_code):
 	#print(stock_code)
 	nifty_opt_chain_url = URLFetchSession(url="https://www.nseindia.com/api/option-chain-equities?symbol=" + stock_code)
 	return nifty_opt_chain_url()
+
+
+get_option_chain_updated_date_url = URLFetchSession(
+	url='https://www1.nseindia.com/live_market/dynaContent/live_watch/option_chain/optionKeys.jsp')
