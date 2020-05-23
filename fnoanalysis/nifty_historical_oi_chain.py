@@ -7,10 +7,22 @@ nifty_oi_chain = pd.read_html("https://fnoanalysis.com/oi/option_chain_hist.php?
 
 column_names = ["CE OI", "Change in CE OI", "% Change in CE OI","CE Volume","CE Closing","% Chng CE Close","Strike","% Chng PE Close","PE Closing","PE Volume","% Change in PE OI","Change in PE OI","CE OI"]
 option_data = pd.DataFrame(columns=column_names)
+nifty_oi_chain_data = nifty_oi_chain[0]
+nifty_oi_chain_data.drop([0,1,2],inplace=True)
+nifty_oi_filter_data = nifty_oi_chain_data.replace('-',0.0)
+data = nifty_oi_filter_data.rename(columns={0:"CE OI",1:"Change in CE OI",2:"% Change in CE OI",3:"CE Volume",4:"CE Closing",5:"% Chng CE Close",6:"Strike",7:"% Chng PE Close",8:"PE Closing",9:"PE Volume",10:"% Change in PE OI",11:"Change in PE OI",12:"PE OI"})
+data.reset_index(drop=True,inplace=True)
+json_data = data.to_json(orient='records')
+print(json_data)
+#print(data)
+#print(type(data.index))
+# for i in range(len(data)):
+# 	print(data.iloc[i,"CE OI"])
+#duplicated = data.index.duplicated(keep=False)
+#print(duplicated)
+# for ind in data.index:
+# 	#print(ind)
+# 	print(data["CE OI"][ind])
+# 	print("####################")
 
-for row in nifty_oi_chain:
-	for ind in range(3,111):
-		for td in range(0,13):
-			ce_pe_data = row[ind][td]
-			print(ce_pe_data)
 

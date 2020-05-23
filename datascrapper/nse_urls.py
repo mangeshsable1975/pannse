@@ -47,3 +47,7 @@ get_option_chain_updated_date_url = URLFetchSession(
 	url='https://www1.nseindia.com/live_market/dynaContent/live_watch/option_chain/optionKeys.jsp')
 
 get_bhav_copy_url = URLFetchSession(url = "https://www1.nseindia.com/archives/equities/mkt/MA200520.csv")
+
+
+def get_nse_holiday_list_url():
+	return "https://www.nseindia.com/products-services/equity-market-timings-holidays"

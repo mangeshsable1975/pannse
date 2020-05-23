@@ -36,7 +36,7 @@ for stock in stocks:
 											   stock_code=stock.stock_code, strike_price=ce_value['strikePrice'],
 											   option_type='CE',expiry_date=ce_value['expiryDate'],identifier=ce_value['identifier'],
 											   open_interest=ce_value['openInterest'],change_in_oi=ce_value['changeinOpenInterest'],
-											   percent_change_in_oi=ce_value['changeinOpenInterest'],total_traded_volume=ce_value['totalTradedVolume'],
+											   percent_change_in_oi=ce_value['pchangeinOpenInterest'],total_traded_volume=ce_value['totalTradedVolume'],
 											   implied_volatility=ce_value['impliedVolatility'],last_price=ce_value['lastPrice'],change=ce_value['change'],
 											   total_buy_quantity=ce_value['totalBuyQuantity'],total_sell_quantity=ce_value['totalSellQuantity'],
 											   underlying_value=ce_value['underlyingValue'])
@@ -50,7 +50,7 @@ for stock in stocks:
 											   identifier=pe_value['identifier'],
 											   open_interest=pe_value['openInterest'],
 											   change_in_oi=pe_value['changeinOpenInterest'],
-											   percent_change_in_oi=pe_value['changeinOpenInterest'],
+											   percent_change_in_oi=pe_value['pchangeinOpenInterest'],
 											   total_traded_volume=pe_value['totalTradedVolume'],
 											   implied_volatility=pe_value['impliedVolatility'],
 											   last_price=pe_value['lastPrice'], change=ce_value['change'],
