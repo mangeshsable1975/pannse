@@ -1,7 +1,7 @@
 from requests import Session
 import requests
 import io
-
+import pandas as pd
 headers = {'Accept': '*/*',
 		   'Accept-Encoding': 'gzip, deflate, sdch, br',
 		   'Accept-Language': 'en-GB,en-US;q=0.8,en;q=0.6',
@@ -21,13 +21,15 @@ webSession.headers.update(headers)
 
 import zipfile, urllib.request, shutil
 
-url = 'https://www1.nseindia.com/archives/equities/bhavcopy/pr/PR200520.zip'
+url = 'https://www1.nseindia.com/archives/equities/mto/MTO_22052020.DAT'
+response = webSession.request('GET',url=url).text
+data = response.splitlines()[4:]
+#print(data)
+dest_file = open("deliveryFile.csv","w")
+dest_file.write("Sr.No,Symbol,Segment,Quantity Traded,Deliverable Quantity,% of Deliverable Quantity" + "\n")
+for row_num in data:
+	#print(row_num)
+	dest_file.write(",".join(row_num.split(",")[1:]) + "\n")
 
-r = webSession.request('GET',url, stream =True)
-check = zipfile.is_zipfile(io.BytesIO(r.content))
-while not check:
-    r = requests.get(url, stream =True)
-    check = zipfile.is_zipfile(io.BytesIO(r.content))
-else:
-    z = zipfile.ZipFile(io.BytesIO(r.content))
-    z.extractall()
+#fii_data = pd.read_(response)
+#print(fii_data)
