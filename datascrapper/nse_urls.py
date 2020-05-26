@@ -51,3 +51,7 @@ get_bhav_copy_url = URLFetchSession(url = "https://www1.nseindia.com/archives/eq
 
 def get_nse_holiday_list_url():
 	return "https://www.nseindia.com/products-services/equity-market-timings-holidays"
+
+
+def get_fno_stock_list_url():
+	return "https://archives.nseindia.com/content/fo/fo_mktlots.csv"

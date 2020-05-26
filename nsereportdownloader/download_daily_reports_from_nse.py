@@ -8,6 +8,22 @@ import pandas as pd
 import logging
 import xml.etree.ElementTree as etree
 
+#PENDING WORK
+##############################################
+#Combined Report
+#https://www1.nseindia.com/content/combined_report.zip
+#FII DII
+#https://www1.nseindia.com/products/content/equities/equities/fii_dii_market_today.htm
+###################################################################
+#Currency Bhav copy
+#https://www1.nseindia.com/archives/cd/bhav/CD_Bhavcopy220520.zip
+
+
+
+
+
+
+
 # Get Web Sessions
 ########################################################################
 old_nse_headers = {'Accept': '*/*',
