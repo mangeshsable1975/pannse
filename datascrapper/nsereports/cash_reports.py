@@ -2,6 +2,9 @@ from requests import Session
 import requests
 import io
 import pandas as pd
+pd.set_option("display.max_columns",None)
+pd.set_option("display.max_rows",None)
+
 headers = {'Accept': '*/*',
 		   'Accept-Encoding': 'gzip, deflate, sdch, br',
 		   'Accept-Language': 'en-GB,en-US;q=0.8,en;q=0.6',
@@ -21,15 +24,28 @@ webSession.headers.update(headers)
 
 import zipfile, urllib.request, shutil
 
-url = 'https://www1.nseindia.com/archives/equities/mto/MTO_22052020.DAT'
-response = webSession.request('GET',url=url).text
-data = response.splitlines()[4:]
+cat_wise_turn_over_file_name= "cat_turnover_26052020.xls"
+#cat_wise_turn_over_dest_file_name= os.path.join(CASH_ROOT_PATH,"cat_turnover_"+currentDate+currentMonthNumber+currentYearShort+".csv")
+cat_wise_turn_over_url = "https://www1.nseindia.com/archives/equities/cat/" + cat_wise_turn_over_file_name
+print(cat_wise_turn_over_url)
+cat_wise_turn_over_data = webSession.request('GET',cat_wise_turn_over_url).content
+print(cat_wise_turn_over_data)
+#cat_wise_turn_over = pd.read_excel(cat_wise_turn_over_data,skiprows=2)
+#cat_wise_turn_over.drop(3,inplace=True)
+#cat_wise_turn_over.to_csv(cat_wise_turn_over_dest_file_name,index=False)
+#from_csv.rename(columns={0:"FNO Type",1:"BUY(No. Of Contracts)",2:"BUY(Amt. In Cr)",3:"SELL(No. Of Contracts)",4:"SELL(Amt. In Cr)",5:"OI AT EOD(No. Of Contracts)",6:"OI AT EOD(Amt. In Cr)"},inplace=True)
+#print(from_csv)
+#data.to_csv("report.csv",index=False)
+
 #print(data)
-dest_file = open("deliveryFile.csv","w")
-dest_file.write("Sr.No,Symbol,Segment,Quantity Traded,Deliverable Quantity,% of Deliverable Quantity" + "\n")
-for row_num in data:
-	#print(row_num)
-	dest_file.write(",".join(row_num.split(",")[1:]) + "\n")
+#cat_wise_turn_over.to_csv("report.csv",index=False)
+#cat_wise_turn_over.drop([0,1],inplace=True)
+#temp_file = open("reportfile.csv","w")
+#temp_file.write("Trade Date,Category,Buy Value,Sell Value")
+#for ind in cat_wise_turn_over.index:
+
+#print(cat_wise_turn_over)
+
 
 #fii_data = pd.read_(response)
 #print(fii_data)
