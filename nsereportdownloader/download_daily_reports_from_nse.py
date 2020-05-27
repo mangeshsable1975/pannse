@@ -56,7 +56,6 @@ html_holidays = new_nse_webSession.request("GET",url="https://www.nseindia.com/p
 holiday_data = pd.read_html(html_holidays)
 holiday_date_list = holiday_data[0]["Date"].tolist()
 weekno = datetime.today().weekday()
-weekno = 6
 if weekno > 5 or datetime.date().strftime("%d-%b-%Y") in holiday_date_list:
 	print("Its Holiday Today so Bye bye.....")
 	exit()
@@ -102,16 +101,6 @@ def download_csv_file(web_session,url,dest_file_name):
 	csv_file.write(url_content)
 	csv_file.close()
 	logging.debug("CSV File Downloaded.......")
-
-
-
-#Get Holdays List
-########################################################################
-#print(nse_urls.get_nse_holiday_list_url())
-########################################################################
-
-# If today is Holiday or Weekend than terminate script
-########################################################################
 
 
 # Create Today's Date Directory in respsective path
