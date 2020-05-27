@@ -141,3 +141,25 @@ TABLESPACE pg_default;
 
 ALTER TABLE public.nse_indices_option_daily
     OWNER to postgres;
+
+CREATE TABLE public.fnoanalysis_historical_oi
+(
+    stock_id integer NOT NULL,
+    trade_date date,
+    stock_code character varying(50) COLLATE pg_catalog."default",
+    strike_price real NOT NULL,
+    option_type character varying(10) COLLATE pg_catalog."default" NOT NULL,
+    expiry_date date NOT NULL,
+    open_interest numeric,
+    change_in_oi numeric,
+    percent_change_in_oi real,
+    total_traded_volume numeric,
+    last_price real,
+    change real,
+    CONSTRAINT fnoanalysis_historical_oi_pkey PRIMARY KEY (stock_id, expiry_date, strike_price, option_type)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE public.fnoanalysis_historical_oi
+    OWNER to postgres;

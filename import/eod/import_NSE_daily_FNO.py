@@ -34,10 +34,11 @@ stocks = session.query(StockList).filter(StockList.fno == True)
 
 for stock in stocks:
 	print("######################## Running for Stock:" + stock.stock_code)
-	if stock.fno_updated < todaysDate:
+	start_date = stock.fno_updated + timedelta(days=1)
+	if start_date < todaysDate:
 		for expiry_date in expiry_dates:
-
-			stock_ohlc_data = get_history(symbol=stock.stock_code, start=stock.fno_updated, end=todaysDate,
+			print(start_date)
+			stock_ohlc_data = get_history(symbol=stock.stock_code, start=start_date, end=todaysDate,
 										  expiry_date=expiry_date,
 										  futures=True, index=True if stock.stock_code in indices_list else False)
 			# print(stock_ohlc_data.dtypes)
