@@ -6,6 +6,7 @@ from datetime import date, datetime, timedelta
 import pandas as pd
 import time
 from sqlalchemy import func, join
+from dash.exceptions import PreventUpdate
 
 pd.set_option('display.max_columns', None)
 todaysDate = datetime.today().date()
@@ -25,9 +26,11 @@ start_time = time.time()
 stocks = session.query(StockList)
 for stock in stocks:
     print("######################## Running for Stock:" + stock.stock_code)
-    if stock.cash_updated < todaysDate:
+    start_date = stock.cash_updated + timedelta(days=1)
+    if start_date == start_date:
         print("START : Getting History......")
-        stock_ohlc_data = get_history_wrapper(symbol=stock.stock_code, start=stock.cash_updated, end=todaysDate)
+        #stock_ohlc_data = get_history_wrapper(symbol=stock.stock_code, start=start_date, end=todaysDate)
+        stock_ohlc_data = get_history_wrapper(symbol=stock.stock_code, start=datetime(2020,5,9), end=datetime(2020,5,18))
         print("END : Got History......")
         for ind in stock_ohlc_data.index:
             if stock_ohlc_data.index.values.size > 0:
