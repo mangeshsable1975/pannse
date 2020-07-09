@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "bigbangholidays-02845",
+  "private_key_id": "044e176b1f668162db150b315657210650f6041b",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDF07lITYCd7RC6\nLq3BxStp7g6+6xkpzG/DGmA3eTXXeYVrKdrOs4Cyzrcbmgnw7t6B5knlSpCncHVT\nlD1tTck8hFpeAFzel8dhNjIqkw5L0GKD7E8EiYkPhYCEoFjFXt6fwT+DXk2VQ6Tw\nBDEUVU6CoEbktqGfirAWRKQSCFayoDY33CpEzNoy/0TnCpkPdMKfVEdqFf+gUtCU\n2vh/U15SsrPTnoIgH9kzHBFr00LwJSIKs7JeYnMVR5NlSFwgVpLR8xPdDtTjKtPw\nE5wWrNW7nqX9cBI+a1UUvsb5dJdFC09AJDtFDxuRZy2r+R7yHn+gvuH5NxKWzpVZ\ne/+DBgZXAgMBAAECggEAEHdaEcGZtgt4e/bMsbdGsM+G3K9W7dq9ZsD4R0XIjIHp\n8AyQ0OmyCbAZH6wHrc1EKg3QEszNE5LRwT4yirmRyX6+wtpG4KRDjTzkmhSZeQgE\nWzS9MwR7qxYSp3dtTChkYWnFbprX3FfAD9ZZe3bKTScoH3twIoZ5t7DI81NMXBvC\nTpTcEKNEcbtaswgIaC2Eh1NsvUMqL/cZ/GUvtTtsf0zEI2tH5fJaJH0d2vPmZGWq\nBBlfdkB6F4Ah6C64dtlSClvRSsdwsmu6npm+ZRQMoQFIvQ/8IgBzDq7eF0EbySQq\n6B6Cgb/HabzZVOfUwbxuZiYH4ann1+ZpBhy0/WYSuQKBgQDmD3GGivv0YuNE/7oQ\nZdIcejYVM8d5O7AGxHQJfhCBprZu8mPOKDrLEGuYN/3C9JkBCdOCGTnRAqxK+M99\noONM836x3/V3srHw3Di1NjsIz0/lxrCxnXsJWtghyrkUIZWEGMlH8GouIzux5u29\nD5sYYnAao8iPBM4rMSnSYraYdQKBgQDcIeKznJA5oQBui4iABIqKgsqQmhVMAb32\nd7KINbja8sogvEazuRdoA0gKEgJlLAXYLhjyY0pP8n8PJ7DrYHCmavfNMcQ2MpBl\nkqQur+YO80Hbdq2tB8fXAajZjNENDWfObOKYFnMIrA62ZWUIjS/QzrB7+roj7/FC\nkkzeU6XqGwKBgDRhy82Ak8GfSnQJbgoRxPdq9Cl7sq1t47SGwozuwT9kACHe2s6z\n5j8aLAVqqkLbgoL0A86Zg8qNO0GOyV+nZFm/D1fc0H1CmLVozxijkml9GooM5Wpr\nmvoUTyXSjLWCuBJtulbA7Mw4hX0KQZNMnFm/ABtws1etFmxLM2SNyVmJAoGAUC1P\nYtf9d9/6RkkwGGCPDVAB85ULeLmRtPl330Ch6a1QjYfFwKQDsHCxhml00eCs6EYx\n8+bSJDhQqvZr6+8eWJ7RTr13l73m9ffpMNAEXSGgtQyOyVzyHo+OLl6prbVaP8dM\n6NQUZe41FZ3spKa36be+dAmoTnqQRwz+TmPtJE0CgYBB/tI1lSw+X43ctuArZObK\nrQocwx7E+EI/1SKB/HrKvmbSnrmKpUyU+Ou85q1erTn2+KR2KOUj4AgroBxSTRgN\nNV1wjsTW0QiwLHz6e+ySaNETQIm3qdNQuJFRCr8fbLieL3/M7EOOjwCN3GHL1Nn4\nE9FKfcV4Z/cC+oVAbxy/TA==\n-----END PRIVATE KEY-----\n",
+  "client_email": "stock-data-sheet@bigbangholidays-02845.iam.gserviceaccount.com",
+  "client_id": "112869773679968880890",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/stock-data-sheet%40bigbangholidays-02845.iam.gserviceaccount.com"
+}

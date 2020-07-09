@@ -19,7 +19,7 @@ def download_csv_file(web_session,url,dest_file_name):
 	csv_file.close()
 
 ROOT_PATH='D:\\Data\\Latest_Trading_Symbols'
-DAILY_CASH_PRICE='D:\\Data_Files'
+DAILY_CASH_PRICE='D:\\Data_Files\\CASH'
 
 latest_equity_list = 'https://www1.nseindia.com/content/equities/EQUITY_L.csv'
 lastest_equity_list_filename = os.path.join(ROOT_PATH,'latest_equity_list.csv')
